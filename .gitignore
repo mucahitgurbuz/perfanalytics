@@ -3,7 +3,6 @@ node_modules/
 .eslinrc
 .tern-project
 yarn-error.log
-server-config.json
 client/src/client-config.js
 .idea/
 server/uploads/*

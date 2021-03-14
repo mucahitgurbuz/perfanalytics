@@ -1,7 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-const path = require("path");
 
 import { login } from "./routes/login";
 import { apps } from "./routes/apps";
@@ -33,14 +32,6 @@ app.use((req, res, next) => {
 app.use("/login", login);
 app.use("/app", apps);
 app.use("/analytic", analytics);
-if (process.env.NODE_ENV === "production") {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, "../client/build")));
-  // Handle React routing, return all requests to React app
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-  });
-}
 
 type CustomError = Error & {
   isJoi?: boolean;

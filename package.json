@@ -14,8 +14,7 @@
     "build:server": "npx tsc --project server/tsconfig.json",
     "build:client": "cd client && yarn build",
     "build": "yarn build:server",
-    "configure": "node configure",
-    "heroku-postbuild": "cd client && yarn && yarn build"
+    "configure": "node configure"
   },
   "engines": {
     "node": "9.0.0"

@@ -5,10 +5,9 @@ import commonStore from "../store/commonStore";
 import appHandler from "./app";
 import authHandler from "./auth";
 
-import config from "../client-config";
 import { Body } from "../types";
 
-const API_ROOT = `http://${config.api.url}:${config.api.port}`;
+const API_ROOT = `http://perfanalytic-api.herokuapp.com`;
 
 const handleErrors = (err: { response: superagent.Response }) => {
   if (err.response.status === 401) {

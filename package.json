@@ -12,7 +12,7 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "build:server": "npx tsc --project server/tsconfig.json",
     "build:client": "cd client && yarn build",
-    "build": "yarn build:server && yarn build:client",
+    "build": "yarn build:server",
     "configure": "node configure"
   },
   "engines": {

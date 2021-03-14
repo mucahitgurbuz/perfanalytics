@@ -9,6 +9,7 @@
   "scripts": {
     "server": "npx ts-node-dev --project server/tsconfig.json server/index.ts",
     "client": "node start-client.js",
+    "start": "node server-dist/index.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "build:server": "npx tsc --project server/tsconfig.json",
     "build:client": "cd client && yarn build",

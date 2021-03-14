@@ -56,7 +56,8 @@ window.perfAnalytic = (appCode, apiUrl = "http://localhost:8080") => {
       performance.timing.responseStart - performance.timing.navigationStart
     );
     analytics.domLoad = msToSeconds(
-      performance.timing.domComplete - performance.timing.navigationStart
+      performance.timing.domContentLoadedEventEnd -
+        performance.timing.navigationStart
     );
     analytics.windowLoad = msToSeconds(
       new Date().getTime() - performance.timing.navigationStart

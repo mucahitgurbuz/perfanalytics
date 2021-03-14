@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
+  },
+  "rules": {
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "interface-name": [true, "never-prefix"]
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "curly": [
+      true,
+      "ignore-same-line"
+    ]
+  }
+}

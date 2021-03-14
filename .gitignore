@@ -1,0 +1,15 @@
+node_modules/
+.vscode/
+.eslinrc
+.tern-project
+yarn-error.log
+server-config.json
+client/src/client-config.js
+.idea/
+server/uploads/*
+!server/uploads/.gitinclude
+server/images/original/*
+!server/images/original/.gitinclude
+server/images/thumbnail/*
+!server/images/thumbnail/.gitinclude
+server-dist/

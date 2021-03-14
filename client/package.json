@@ -1,0 +1,52 @@
+{
+  "name": "@mucahitgurbuz/perfanalytics-dashboard",
+  "author": "Mücahit Gürbüz",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@types/crypto-js": "^3.1.43",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/styled-components": "^4.1.8",
+    "@types/styled-theming": "^2.2.2",
+    "@types/superagent": "^3.8.4",
+    "antd": "3.26.20",
+    "chart.js": "^2.9.4",
+    "crypto-js": "^3.1.9-1",
+    "lodash": "^4.17.10",
+    "mobx": "^4.1.1",
+    "mobx-react": "6.0.0",
+    "moment": "^2.29.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.12.0",
+    "react-app-rewire-less": "^2.1.1",
+    "react-app-rewire-mobx": "^1.0.8",
+    "react-app-rewire-typescript": "^2.0.2",
+    "react-app-rewired": "^1.5.0",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "^16.12.0",
+    "react-easy-crop": "^1.1.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.5",
+    "react-scripts-ts": "^2.17.0",
+    "styled-components": "^5.0.1",
+    "styled-theming": "^2.2.0",
+    "superagent": "^3.8.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.2",
+    "@types/react": "^16.4.12",
+    "@types/react-dom": "^16.4.12",
+    "babel-plugin-import": "^1.6.7",
+    "ts-import-plugin": "^1.5.4",
+    "typescript": "^3.0.1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@mucahitgurbuz/perfanalytics.js",
+  "version": "1.0.2",
+  "description": "Plug-an-play performance client for Perfanalytics app. Measure your app stats.",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "dist/index.js"
+  ],
+  "author": "Mücahit Gürbüz",
+  "scripts": {
+    "dev": "parcel index.js",
+    "build": "parcel build index.js"
+  },
+  "devDependencies": {
+    "parcel-bundler": "1.12.3"
+  }
+}

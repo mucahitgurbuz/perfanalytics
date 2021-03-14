@@ -31,7 +31,7 @@ export const authenticate = async (
       return;
     }
 
-    req.app = app;
+    req.app = app as any;
     next();
   } catch (e) {
     if (e.name === "TokenExpiredError" || e.name === "JsonWebTokenError") {

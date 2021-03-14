@@ -42,6 +42,9 @@
     "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
     "eject": "react-scripts-ts eject"
   },
+  "engines": {
+    "node": "9.0.0"
+  },
   "devDependencies": {
     "@types/node": "^10.9.2",
     "@types/react": "^16.4.12",

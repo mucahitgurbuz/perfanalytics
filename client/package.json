@@ -53,5 +53,6 @@
     "babel-plugin-import": "^1.6.7",
     "ts-import-plugin": "^1.5.4",
     "typescript": "^3.0.1"
-  }
+  },
+  "proxy": "http://localhost:8080/"
 }

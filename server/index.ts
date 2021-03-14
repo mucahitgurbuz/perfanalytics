@@ -20,14 +20,16 @@ const production = process.env.NODE_ENV === "production";
     require(path.resolve(__dirname, "db", "fillDummyContent"))(
       sequelize,
       () => {
-        createServer(app).listen(config.api.port, () =>
-          console.info(`listening on port ${config.api.port}`)
+        createServer(app).listen(process.env.PORT || config.api.port, () =>
+          console.info(
+            `listening on port ${process.env.PORT || config.api.port}`
+          )
         );
       }
     );
   } else {
-    createServer(app).listen(config.api.port, () =>
-      console.info(`listening on port ${config.api.port}`)
+    createServer(app).listen(process.env.PORT || config.api.port, () =>
+      console.info(`listening on port ${process.env.PORT || config.api.port}`)
     );
   }
 })();

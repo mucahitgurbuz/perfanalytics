@@ -15,6 +15,9 @@
     "build": "yarn build:server && yarn build:client",
     "configure": "node configure"
   },
+  "engines": {
+    "node": "9.0.0"
+  },
   "dependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/cors": "^2.8.4",

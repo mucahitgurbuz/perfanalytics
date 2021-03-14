@@ -1,6 +1,6 @@
 {
   "name": "@mucahitgurbuz/perfanalytics.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Plug-an-play performance client for Perfanalytics app. Measure your app stats.",
   "main": "index.js",
   "license": "MIT",

@@ -1,14 +1,10 @@
 import { inject, observer } from "mobx-react";
 import React from "react";
 import { Link, RouteComponentProps, withRouter } from "react-router-dom";
-import styled from "styled-components";
-import theme from "styled-theming";
 
 import { App, AppStore } from "../store/appStore";
 import { AuthStore } from "../store/authStore";
 import { CommonStore } from "../store/commonStore";
-
-import { ThemeToggleContext } from "./../ThemeContext";
 
 export interface HeaderProfileProps {
   self: App | null;
@@ -23,15 +19,6 @@ const HeaderProfile = inject("authStore")(
         self,
       }: RouteComponentProps &
         HeaderProfileProps & { authStore?: AuthStore }) => {
-        const color = theme("mode", {
-          light: "rgba(0, 0, 0, 0.65)",
-          dark: "rgba(0, 0, 0, 0.65)",
-        });
-
-        const Wrapper = styled.div`
-          color: ${color};
-        `;
-
         const onLogout = () => {
           authStore?.logout();
         };
@@ -47,14 +34,14 @@ const HeaderProfile = inject("authStore")(
         }
 
         return (
-          <Wrapper className="header__profile">
+          <div className="header__profile">
             <div className="header__profile-badge flex--aligned flex--centered">
               <span>{self.appName}</span>
             </div>
             <div>
               <button onClick={onLogout}>Logout</button>
             </div>
-          </Wrapper>
+          </div>
         );
       }
     )
@@ -88,20 +75,6 @@ const Header = inject(
           </Link>
           <div className="flex-spacer" />
           {children}
-          <ThemeToggleContext.Consumer>
-            {({ themeState, toggleTheme }) => (
-              <>
-                <span className="app-header__theme-text">
-                  Enter the dark mode
-                </span>
-                <label onClick={toggleTheme} className="switch">
-                  <input checked={themeState.mode === "dark"} type="checkbox" />
-                  <span className="slider round" />
-                </label>
-              </>
-            )}
-          </ThemeToggleContext.Consumer>
-
           <HeaderProfile self={appStore.self} />
         </div>
       );

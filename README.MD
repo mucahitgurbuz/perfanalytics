@@ -5,14 +5,14 @@ Repository for Perfanalytic app which includes PerfanalyticsJs, PerfanalyticsAPI
 Go to perfanalytic dashboard (http://perfanalytic-monitor.herokuapp.com/) and register your app. Add to provided scripts to your app header and start measuring your app performance.
 You can use demo login to see perfanalytic dashboard metrics.
 
-Demo purposed login  
+**Demo purposed login**  
 username: demo  
 password: demo  
 
 
 "client" folder handles frontend (Perfanalytics Dashboard), "server" folder handles backend (PerfanalyticsAPI) and "perfanalyticsJs" folder handles plug-and-play client library (PerfanalyticsJs).
 
-Use Node version *9.0.0* for a smooth experience.
+Use Node version **9.0.0** for a smooth experience.
 
 First run yarn in root/ folder.  
 Then run yarn in client/ folder.
@@ -33,19 +33,7 @@ yarn dev
 NPM Link: https://www.npmjs.com/package/@mucahitgurbuz/perfanalytics.js
 CDN Link: https://cdn.jsdelivr.net/npm/@mucahitgurbuz/perfanalytics.js@1.0.3/dist/index.js
 
-vscode settins for eslint to work properly(install eslint extension first)
 
-```json
-{
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "editor.colorDecorators": true
-}
-```
 
 ## Load Test Results
 During the load test max RPS (request per second) value obtained was *126*.
@@ -80,4 +68,18 @@ Perfanalytic app is fully dockerized.
 To start containers for backend and frontend copy mysql configuration from docker-compose.yml and apply to server/server-config.json. Then, run in the root:
 ```
 docker-compose up -d  
+```
+
+vscode settins for eslint to work properly(install eslint extension first)
+
+```json
+{
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "editor.colorDecorators": true
+}
 ```

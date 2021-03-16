@@ -11,7 +11,12 @@ export default async (req: Request & { app: App }, res: Response) => {
   const response: any = {};
 
   DomLoad.findAll({
-    where: { ofId: req.app.dataValues.id },
+    where: {
+      ofId: req.app.dataValues.id,
+      createdAt: {
+        [Op.between]: [req.query.start, req.query.end],
+      },
+    },
   }).then((domLoads) => {
     response.domLoads = domLoads;
 
